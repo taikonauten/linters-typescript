@@ -1,0 +1,24 @@
+{
+  "name": "@taikonauten/linters-typescript",
+  "version": "1.0.0",
+  "description": "This package provides the Typescript linter used at Taikonauten",
+  "license": "MIT",
+  "keywords": [
+    "lint",
+    "linting",
+    "JavaScript",
+    "TypeScript",
+    "ESLint"
+  ],
+  "contributors": [
+    "Tobias Schubert <ts@taikonauten.com>"
+  ],
+  "homepage": "https://github.com/taikonauten/linters-typescript#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taikonauten/linters-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taikonauten/linters-typescript/issues"
+  }
+}
