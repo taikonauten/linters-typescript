@@ -26,14 +26,11 @@ Create a `.eslintrc` file in your project root and use the following content for
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 10,
-    "sourceType": "module"
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {}
   },
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
+  "env": {},
   "parserOptions": {
     "project": "./tsconfig.json"
   },
@@ -46,6 +43,11 @@ Create a `.eslintrc` file in your project root and use the following content for
   ]
 }
 ```
+
+This is an example config and in most cases you will need to fine tune it depending on the project.
+More information on how to configure: [Configuring ESLint](https://eslint.org/docs/user-guide/configuring)
+
+## Using with your IDE or Editor
 
 After that, make sure your editor or IDE supports the `.eslintrc` file. PhpStorm works with it right out of the box.
 For Sublime Text, install the [SublimeLinter-eslint](https://github.com/SublimeLinter/SublimeLinter-eslint) plugin.
