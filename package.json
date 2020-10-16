@@ -20,5 +20,6 @@
   },
   "bugs": {
     "url": "https://github.com/taikonauten/linters-typescript/issues"
-  }
+  },
+  "author": "engineering@taikonauten.com"
 }
