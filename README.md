@@ -36,8 +36,8 @@ Create a `.eslintrc` file in your project root and use the following content for
   },
   "plugins": ["@typescript-eslint"],
   "extends": [
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "./node_modules/@taikonauten/linters-typescript/eslint/index.js"
   ]
