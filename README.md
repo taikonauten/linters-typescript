@@ -28,12 +28,10 @@ Create a `.eslintrc` file in your project root and use the following content for
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module",
-    "ecmaFeatures": {}
-  },
-  "env": {},
-  "parserOptions": {
+    "ecmaFeatures": {},
     "project": "./tsconfig.json"
   },
+  "env": {},
   "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
