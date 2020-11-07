@@ -17,29 +17,46 @@ This package provides the TypeScript linter used at [Taikonauten](https://taikon
 Run the following two commands in your terminal to install the package:
 
 ```bash
-npm install --save-dev @taikonauten/linters-typescript eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev @taikonauten/linters-typescript @taikonauten/linters-js eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin babel-eslint
 ```
 
-Create a `.eslintrc` file in your project root and use the following content for it:
+Create a `.eslintrc.js` file in your project root and use the following content for it:
 
-```json
-{
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 12,
-    "sourceType": "module",
-    "ecmaFeatures": {},
-    "project": "./tsconfig.json"
+```javascript
+module.exports = {
+  env: {
+    es2021: true
   },
-  "env": {},
-  "plugins": ["@typescript-eslint"],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "./node_modules/@taikonauten/linters-typescript/eslint/index.js"
-  ]
-}
+  extends: [
+    'eslint:recommended',
+    './node_modules/@taikonauten/linters-js/eslint/index.js',
+    'plugin:react/recommended',
+  ],
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaFeatures: {},
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: [],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: ['./tsconfig.json'],
+      },
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        './node_modules/@taikonauten/linters-typescript/eslint/index.js',
+      ],
+      plugins: [
+        '@typescript-eslint',
+      ],
+    }
+  ],
+};
 ```
 
 This is an example config and in most cases you will need to fine tune it depending on the project.
