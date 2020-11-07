@@ -1,6 +1,6 @@
 {
   "name": "@taikonauten/linters-typescript",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "This package provides the Typescript linter used at Taikonauten",
   "license": "MIT",
   "keywords": [
